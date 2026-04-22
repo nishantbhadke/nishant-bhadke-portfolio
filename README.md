@@ -4,6 +4,8 @@ A focused portfolio for Nishant Bhadke, built to present backend engineering wor
 
 Live repo: [nishantbhadke/nishant-bhadke-portfolio](https://github.com/nishantbhadke/nishant-bhadke-portfolio)
 
+Live site: [nishantbhadke.github.io/nishant-bhadke-portfolio](https://nishantbhadke.github.io/nishant-bhadke-portfolio/)
+
 ## What This Site Does
 
 - Opens with a clear engineering positioning statement instead of a generic introduction.
@@ -98,6 +100,8 @@ Import the GitHub repository into Vercel and deploy with the default Next.js set
 ### GitHub Pages
 
 This project uses `output: "export"` in `next.config.mjs`, so `npm run build` creates a static `out/` directory. Use that folder as the Pages artifact in a GitHub Actions workflow.
+
+The repository includes `.github/workflows/pages.yml`, which builds and deploys the static export whenever `main` is pushed.
 
 ## Content Updates
 

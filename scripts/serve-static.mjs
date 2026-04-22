@@ -5,6 +5,7 @@ import { extname, resolve } from "node:path";
 const root = resolve("out");
 const port = Number(process.env.PORT || 4173);
 const host = process.env.HOST || "127.0.0.1";
+const basePath = process.env.BASE_PATH || "";
 
 const contentTypes = {
   ".html": "text/html; charset=utf-8",
@@ -16,7 +17,11 @@ const contentTypes = {
 };
 
 function safePath(url = "/") {
-  const cleanUrl = decodeURIComponent(url.split("?")[0] || "/");
+  let cleanUrl = decodeURIComponent(url.split("?")[0] || "/");
+  if (basePath && cleanUrl.startsWith(basePath)) {
+    cleanUrl = cleanUrl.slice(basePath.length) || "/";
+  }
+
   const requested = cleanUrl === "/" ? "/index.html" : cleanUrl;
   const filePath = resolve(root, `.${requested}`);
 
