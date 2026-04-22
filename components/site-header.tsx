@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "@/lib/profile";
 
@@ -51,6 +51,13 @@ export function SiteHeader() {
               </a>
             );
           })}
+          <a
+            href={profile.resume}
+            download
+            className="focus-ring ml-2 inline-flex items-center gap-2 rounded-lg border border-ink-300 px-3 py-2 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
+          >
+            Resume <Download size={15} />
+          </a>
         </nav>
 
         <button
@@ -77,6 +84,14 @@ export function SiteHeader() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={profile.resume}
+              download
+              className="focus-ring flex items-center gap-2 rounded-lg px-3 py-3 text-sm font-medium text-ink-700 hover:bg-ink-100 hover:text-ink-950"
+              onClick={() => setOpen(false)}
+            >
+              Resume <Download size={15} />
+            </a>
           </div>
         </nav>
       ) : null}

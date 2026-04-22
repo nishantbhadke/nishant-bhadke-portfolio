@@ -7,10 +7,10 @@ export const profile = {
   phone: "+91 9172773982",
   linkedin: "https://www.linkedin.com/in/nishant-bhadke-983837185/",
   github: "https://github.com/",
-  headline:
-    "I build resilient banking platforms, high-performance APIs, and compliance workflows that keep enterprise operations moving.",
+  resume: "Nishant_Bhadke_Resume.pdf",
   summary:
-    "Software engineer focused on .NET Core, SQL Server, secure API design, and cloud-ready delivery for BFSI systems. My work spans loan origination, account workflows, data migration, Redis-backed performance improvements, third-party integrations, and production support.",
+    "Software engineer at Winjit Technologies with hands-on experience across banking and financial platforms for Suryoday Small Finance Bank, City Union Bank, and enterprise loan workflow systems. Focused on .NET Core, SQL Server, secure APIs, Redis caching, AWS, Docker, and production-ready delivery.",
+  companies: ["Winjit Technologies", "Suryoday Small Finance Bank", "City Union Bank", "BCMS / RADC"],
   stack: [".NET Core", "C#", "SQL Server", "REST APIs", "Docker", "AWS", "Redis"],
   metrics: [
     { value: "4.5+", label: "years shipping production software" },
@@ -20,7 +20,6 @@ export const profile = {
   navigation: [
     { label: "Work", href: "#work" },
     { label: "Projects", href: "#projects" },
-    { label: "Prototype", href: "#prototype" },
     { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" }
   ]
@@ -62,7 +61,8 @@ export const projects = [
     duration: "10 months",
     description:
       "Developed transaction and authentication APIs for a small finance bank deployment, then introduced Redis caching to reduce database pressure during peak usage.",
-    impact: "Cut database query load by roughly 95% while improving API response latency under high transaction volume.",
+    impact:
+      "Implemented Redis caching strategy to reduce database query load by ~95%, significantly improving API response latency at peak transaction volumes.",
     tech: [".NET Core", "SQL Server", "Redis", "REST APIs", "Authentication"],
     links: {
       live: "#contact",
@@ -76,7 +76,7 @@ export const projects = [
     description:
       "Redesigned schemas, stored procedures, and data-access layers during an Oracle migration from SQL Server for enterprise banking workflows.",
     impact:
-      "Integrated certificate-based third-party authentication with multiple encryption methods to protect core banking data exchange.",
+      "Integrated certificate-based third-party API authentication with multiple encryption methods, ensuring end-to-end data integrity across core banking workflows.",
     tech: ["Oracle", "SQL Server", ".NET", "Secure APIs", "Data Migration"],
     links: {
       live: "#contact",
@@ -110,36 +110,6 @@ export const projects = [
       live: "#contact",
       repo: "#contact"
     }
-  }
-];
-
-export const prototypeViews = [
-  {
-    id: "api",
-    label: "API Flow",
-    title: "Secure Banking API Flow",
-    summary:
-      "A compact walkthrough of how a request moves through authentication, validation, business rules, cache, persistence, and response handling.",
-    metrics: ["Certificate auth", "Redis cache", "SQL-backed audit"],
-    steps: ["Authenticate request", "Validate payload", "Apply business rules", "Read/write cache", "Persist transaction", "Return traceable response"]
-  },
-  {
-    id: "workflow",
-    label: "Workflow",
-    title: "Maker-Checker Loan Workflow",
-    summary:
-      "A simplified prototype of the approval path used in compliance-heavy lending operations, designed for clarity on any screen size.",
-    metrics: ["Role-based access", "Approval queue", "Disbursement guardrails"],
-    steps: ["Create application", "Attach documents", "Maker submits", "Checker verifies", "Resolve exceptions", "Approve disbursement"]
-  },
-  {
-    id: "performance",
-    label: "Performance",
-    title: "Performance Tuning Snapshot",
-    summary:
-      "A lightweight view of the performance mindset behind SQL tuning and Redis caching work, without adding heavy charts or runtime dependencies.",
-    metrics: ["95% DB load reduction", "40-45% SQL improvement", "Lower peak latency"],
-    steps: ["Measure slow path", "Find hot queries", "Add cache boundary", "Tune indexes", "Reduce repeated reads", "Monitor production behavior"]
   }
 ];
 

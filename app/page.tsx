@@ -1,7 +1,6 @@
-import { ArrowDown, Award, CheckCircle2, ExternalLink, ShieldCheck } from "lucide-react";
+import { ArrowDown, Award, CheckCircle2, Download, ExternalLink, ShieldCheck } from "lucide-react";
 import { ContactFooter } from "@/components/contact-footer";
 import { ProjectCard } from "@/components/project-card";
-import { PrototypePanel } from "@/components/prototype-panel";
 import { SectionReveal } from "@/components/section-reveal";
 import { SiteHeader } from "@/components/site-header";
 import { certifications, education, profile, projects, skillGroups, work } from "@/lib/profile";
@@ -12,18 +11,26 @@ export default function Home() {
       <SiteHeader />
 
       <section className="container-grid pb-16 pt-20 sm:py-24 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+        <div className="max-w-4xl">
           <div>
             <p className="eyebrow">{profile.role}</p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
               {profile.name}
             </h1>
-            <p className="mt-5 max-w-3xl text-xl font-medium leading-8 text-ink-900 sm:text-2xl sm:leading-9 lg:text-3xl lg:leading-10">
-              {profile.headline}
-            </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg">{profile.summary}</p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-2 text-sm text-ink-600">
+            <div className="mt-8">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink-500">Worked across</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {profile.companies.map((company) => (
+                  <span key={company} className="rounded-lg border border-ink-200 bg-ink-50 px-3 py-2 text-sm font-medium text-ink-800">
+                    {company}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-7 flex flex-wrap items-center gap-2 text-sm text-ink-600">
               {profile.stack.map((item, index) => (
                 <span key={item} className="flex items-center gap-2">
                   <span className="rounded-lg border border-ink-200 bg-ink-50 px-3 py-1.5">{item}</span>
@@ -40,28 +47,20 @@ export default function Home() {
                 View work <ArrowDown size={16} />
               </a>
               <a
-                href="#prototype"
-                className="focus-ring inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-ink-50 px-5 py-3 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
-              >
-                Open prototype
-              </a>
-              <a
                 href={profile.linkedin}
                 className="focus-ring inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-ink-50 px-5 py-3 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
               >
                 LinkedIn <ExternalLink size={16} />
               </a>
+              <a
+                href={profile.resume}
+                download
+                className="focus-ring inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-ink-50 px-5 py-3 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
+              >
+                Resume <Download size={16} />
+              </a>
             </div>
           </div>
-
-          <aside className="grid gap-3 border-t border-ink-200 pt-6 sm:grid-cols-3 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
-            {profile.metrics.map((metric) => (
-              <div key={metric.label} className="py-4">
-                <p className="text-4xl font-semibold tracking-tight text-ink-950">{metric.value}</p>
-                <p className="mt-1 text-sm leading-6 text-ink-600">{metric.label}</p>
-              </div>
-            ))}
-          </aside>
         </div>
       </section>
 
@@ -117,21 +116,6 @@ export default function Home() {
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
-      </SectionReveal>
-
-      <SectionReveal id="prototype" className="container-grid py-16 sm:py-24">
-        <div className="mb-10 grid gap-5 lg:grid-cols-[0.42fr_1fr] lg:items-end">
-          <div>
-            <p className="eyebrow">Prototype</p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              A simple executable demo view for interviews and walkthroughs.
-            </h2>
-          </div>
-          <p className="max-w-2xl text-sm leading-6 text-ink-600">
-            This prototype keeps the portfolio interactive without heavy assets. It is built from static data, uses small client-side state only where needed, and stays readable on mobile, tablet, and desktop.
-          </p>
-        </div>
-        <PrototypePanel />
       </SectionReveal>
 
       <SectionReveal id="skills" className="container-grid py-16 sm:py-24">

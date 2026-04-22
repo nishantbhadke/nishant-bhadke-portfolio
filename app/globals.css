@@ -46,7 +46,7 @@ a {
   }
 
   .eyebrow {
-    @apply text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ink-500 sm:text-xs sm:tracking-[0.18em];
+    @apply text-[0.7rem] font-bold uppercase tracking-[0.18em] text-ink-700 sm:text-xs sm:tracking-[0.2em];
   }
 
   .focus-ring {

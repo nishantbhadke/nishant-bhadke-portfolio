@@ -11,7 +11,6 @@ Live site: [nishantbhadke.github.io/nishant-bhadke-portfolio](https://nishantbha
 - Opens with a clear engineering positioning statement instead of a generic introduction.
 - Highlights measurable impact from BFSI work, including SQL optimization and Redis-backed database load reduction.
 - Organizes work, projects, skills, education, certifications, and contact details into a clean one-page flow.
-- Includes a lightweight interactive prototype section for interview walkthroughs and demo conversations.
 - Uses subtle motion for section reveals and project hover states without heavy visuals or slow assets.
 - Exports statically, so it can run on Vercel or GitHub Pages.
 
@@ -36,7 +35,6 @@ app/
 components/
   contact-footer.tsx Contact and professional links
   project-card.tsx   Animated project card
-  prototype-panel.tsx Lightweight interactive demo/prototype
   section-reveal.tsx Shared Framer Motion reveal wrapper
   site-header.tsx    Sticky blurred navigation
 lib/
