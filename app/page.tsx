@@ -11,14 +11,17 @@ export default function Home() {
     <main id="top" className="min-h-screen text-ink-950">
       <SiteHeader />
 
-      <section className="container-grid pb-16 pt-20 sm:py-24 lg:py-32">
+      <section className="container-grid pb-16 pt-20 sm:py-24 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
             <p className="eyebrow">{profile.role}</p>
-            <h1 className="mt-4 max-w-4xl text-[2.35rem] font-semibold leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl">
-              {profile.headline}
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              {profile.name}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg">{profile.summary}</p>
+            <p className="mt-5 max-w-3xl text-xl font-medium leading-8 text-ink-900 sm:text-2xl sm:leading-9 lg:text-3xl lg:leading-10">
+              {profile.headline}
+            </p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg">{profile.summary}</p>
 
             <div className="mt-8 flex flex-wrap items-center gap-2 text-sm text-ink-600">
               {profile.stack.map((item, index) => (
