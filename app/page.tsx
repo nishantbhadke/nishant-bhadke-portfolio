@@ -11,11 +11,11 @@ export default function Home() {
     <main id="top" className="min-h-screen text-ink-950">
       <SiteHeader />
 
-      <section className="container-grid py-16 sm:py-24 lg:py-32">
+      <section className="container-grid pb-16 pt-20 sm:py-24 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
             <p className="eyebrow">{profile.role}</p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 max-w-4xl text-[2.35rem] font-semibold leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl">
               {profile.headline}
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg">{profile.summary}</p>
