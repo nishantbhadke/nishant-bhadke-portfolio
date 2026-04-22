@@ -6,7 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run build",
+    "audit:deps": "npm audit",
+    "audit:signatures": "npm audit signatures"
+  },
+  "packageManager": "npm@11.9.0",
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "framer-motion": "11.18.2",
