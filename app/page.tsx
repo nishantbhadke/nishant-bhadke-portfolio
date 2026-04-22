@@ -1,6 +1,7 @@
 import { ArrowDown, Award, CheckCircle2, ExternalLink, ShieldCheck } from "lucide-react";
 import { ContactFooter } from "@/components/contact-footer";
 import { ProjectCard } from "@/components/project-card";
+import { PrototypePanel } from "@/components/prototype-panel";
 import { SectionReveal } from "@/components/section-reveal";
 import { SiteHeader } from "@/components/site-header";
 import { certifications, education, profile, projects, skillGroups, work } from "@/lib/profile";
@@ -10,11 +11,11 @@ export default function Home() {
     <main id="top" className="min-h-screen text-ink-950">
       <SiteHeader />
 
-      <section className="container-grid py-20 sm:py-24 lg:py-32">
+      <section className="container-grid py-16 sm:py-24 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
             <p className="eyebrow">{profile.role}</p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
               {profile.headline}
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg">{profile.summary}</p>
@@ -36,6 +37,12 @@ export default function Home() {
                 View work <ArrowDown size={16} />
               </a>
               <a
+                href="#prototype"
+                className="focus-ring inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-ink-50 px-5 py-3 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
+              >
+                Open prototype
+              </a>
+              <a
                 href={profile.linkedin}
                 className="focus-ring inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-ink-50 px-5 py-3 text-sm font-medium text-ink-800 transition-colors hover:border-ink-950 hover:text-ink-950"
               >
@@ -44,7 +51,7 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="grid gap-3 border-l border-ink-200 pl-6">
+          <aside className="grid gap-3 border-t border-ink-200 pt-6 sm:grid-cols-3 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
             {profile.metrics.map((metric) => (
               <div key={metric.label} className="py-4">
                 <p className="text-4xl font-semibold tracking-tight text-ink-950">{metric.value}</p>
@@ -107,6 +114,21 @@ export default function Home() {
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
+      </SectionReveal>
+
+      <SectionReveal id="prototype" className="container-grid py-16 sm:py-24">
+        <div className="mb-10 grid gap-5 lg:grid-cols-[0.42fr_1fr] lg:items-end">
+          <div>
+            <p className="eyebrow">Prototype</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
+              A simple executable demo view for interviews and walkthroughs.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-6 text-ink-600">
+            This prototype keeps the portfolio interactive without heavy assets. It is built from static data, uses small client-side state only where needed, and stays readable on mobile, tablet, and desktop.
+          </p>
+        </div>
+        <PrototypePanel />
       </SectionReveal>
 
       <SectionReveal id="skills" className="container-grid py-16 sm:py-24">

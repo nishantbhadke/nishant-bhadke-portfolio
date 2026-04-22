@@ -20,6 +20,7 @@ export const profile = {
   navigation: [
     { label: "Work", href: "#work" },
     { label: "Projects", href: "#projects" },
+    { label: "Prototype", href: "#prototype" },
     { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" }
   ]
@@ -109,6 +110,36 @@ export const projects = [
       live: "#contact",
       repo: "#contact"
     }
+  }
+];
+
+export const prototypeViews = [
+  {
+    id: "api",
+    label: "API Flow",
+    title: "Secure Banking API Flow",
+    summary:
+      "A compact walkthrough of how a request moves through authentication, validation, business rules, cache, persistence, and response handling.",
+    metrics: ["Certificate auth", "Redis cache", "SQL-backed audit"],
+    steps: ["Authenticate request", "Validate payload", "Apply business rules", "Read/write cache", "Persist transaction", "Return traceable response"]
+  },
+  {
+    id: "workflow",
+    label: "Workflow",
+    title: "Maker-Checker Loan Workflow",
+    summary:
+      "A simplified prototype of the approval path used in compliance-heavy lending operations, designed for clarity on any screen size.",
+    metrics: ["Role-based access", "Approval queue", "Disbursement guardrails"],
+    steps: ["Create application", "Attach documents", "Maker submits", "Checker verifies", "Resolve exceptions", "Approve disbursement"]
+  },
+  {
+    id: "performance",
+    label: "Performance",
+    title: "Performance Tuning Snapshot",
+    summary:
+      "A lightweight view of the performance mindset behind SQL tuning and Redis caching work, without adding heavy charts or runtime dependencies.",
+    metrics: ["95% DB load reduction", "40-45% SQL improvement", "Lower peak latency"],
+    steps: ["Measure slow path", "Find hot queries", "Add cache boundary", "Tune indexes", "Reduce repeated reads", "Monitor production behavior"]
   }
 ];
 

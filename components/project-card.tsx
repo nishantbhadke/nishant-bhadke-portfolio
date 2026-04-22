@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight, Github } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 type ProjectCardProps = {
   project: {
@@ -19,10 +19,12 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.article
       className="group grid min-h-[344px] content-between rounded-lg border border-ink-200 bg-ink-50 p-6 shadow-line-soft transition-colors duration-300 hover:border-ink-900"
-      whileHover={{ y: -4 }}
+      whileHover={shouldReduceMotion ? undefined : { y: -4 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
     >
       <div>

@@ -9,6 +9,7 @@ Live repo: [nishantbhadke/nishant-bhadke-portfolio](https://github.com/nishantbh
 - Opens with a clear engineering positioning statement instead of a generic introduction.
 - Highlights measurable impact from BFSI work, including SQL optimization and Redis-backed database load reduction.
 - Organizes work, projects, skills, education, certifications, and contact details into a clean one-page flow.
+- Includes a lightweight interactive prototype section for interview walkthroughs and demo conversations.
 - Uses subtle motion for section reveals and project hover states without heavy visuals or slow assets.
 - Exports statically, so it can run on Vercel or GitHub Pages.
 
@@ -33,10 +34,13 @@ app/
 components/
   contact-footer.tsx Contact and professional links
   project-card.tsx   Animated project card
+  prototype-panel.tsx Lightweight interactive demo/prototype
   section-reveal.tsx Shared Framer Motion reveal wrapper
   site-header.tsx    Sticky blurred navigation
 lib/
   profile.ts         Portfolio content and resume-derived copy
+scripts/
+  serve-static.mjs   Dependency-free static preview server
 ```
 
 ## Run Locally
@@ -53,6 +57,19 @@ If your global `npm` shortcut is broken on Windows, use Node's npm CLI directly:
 ```powershell
 & 'C:\Program Files\nodejs\node.exe' 'C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js' run dev
 ```
+
+## Demo Preview
+
+Build the static site, then serve it with the included Node preview script:
+
+```powershell
+npm run build
+npm run preview
+```
+
+Open `http://127.0.0.1:4173`.
+
+No Linux subsystem, Docker, or extra global server package is required.
 
 ## Quality Checks
 
