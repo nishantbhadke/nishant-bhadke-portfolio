@@ -10,7 +10,7 @@ export const profile = {
   resume: "Nishant_Bhadke_Resume.pdf",
   summary:
     "Software engineer at Winjit Technologies with hands-on experience across banking and financial platforms for Suryoday Small Finance Bank, City Union Bank, and enterprise loan workflow systems. Focused on .NET Core, SQL Server, secure APIs, Redis caching, AWS, Docker, and production-ready delivery.",
-  companies: ["Winjit Technologies", "Suryoday Small Finance Bank", "City Union Bank"],
+  companies: ["Winjit Technologies", "Suryoday Small Finance Bank", "City Union Bank", "RBL-BCMS Project", "RBL-RADC Project"],
   stack: [".NET Core", "C#", "SQL Server", "REST APIs", "Docker", "AWS", "Redis"],
   navigation: [
     { label: "Work", href: "#work" },
@@ -149,3 +149,5 @@ export const education = [
 ];
 
 export const certifications = ["AWS Fundamentals: Going Cloud Native"];
+
+export const awards = ["Agile Excellence Award"];

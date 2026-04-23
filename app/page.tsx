@@ -3,7 +3,7 @@ import { ContactFooter } from "@/components/contact-footer";
 import { ProjectCard } from "@/components/project-card";
 import { SectionReveal } from "@/components/section-reveal";
 import { SiteHeader } from "@/components/site-header";
-import { certifications, education, profile, projects, skillGroups, work } from "@/lib/profile";
+import { awards, certifications, education, profile, projects, skillGroups, work } from "@/lib/profile";
 
 export default function Home() {
   return (
@@ -163,14 +163,29 @@ export default function Home() {
           <article className="rounded-lg border border-ink-200 bg-ink-50 p-6 shadow-line-soft">
             <div className="flex items-center gap-3">
               <ShieldCheck size={19} />
-              <h2 className="text-lg font-semibold">Certifications</h2>
+              <h2 className="text-lg font-semibold">Certifications & Awards</h2>
             </div>
-            <div className="mt-6 grid gap-3">
-              {certifications.map((item) => (
-                <p key={item} className="rounded-lg bg-ink-100 px-4 py-3 text-sm text-ink-700">
-                  {item}
-                </p>
-              ))}
+            <div className="mt-6 grid gap-5">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-ink-500">Certifications</p>
+                <div className="mt-3 grid gap-3">
+                  {certifications.map((item) => (
+                    <p key={item} className="rounded-lg bg-ink-100 px-4 py-3 text-sm text-ink-700">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-ink-500">Awards</p>
+                <div className="mt-3 grid gap-3">
+                  {awards.map((item) => (
+                    <p key={item} className="rounded-lg bg-ink-100 px-4 py-3 text-sm text-ink-700">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </article>
         </div>
