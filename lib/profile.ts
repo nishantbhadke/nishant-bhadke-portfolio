@@ -10,13 +10,8 @@ export const profile = {
   resume: "Nishant_Bhadke_Resume.pdf",
   summary:
     "Software engineer at Winjit Technologies with hands-on experience across banking and financial platforms for Suryoday Small Finance Bank, City Union Bank, and enterprise loan workflow systems. Focused on .NET Core, SQL Server, secure APIs, Redis caching, AWS, Docker, and production-ready delivery.",
-  companies: ["Winjit Technologies", "Suryoday Small Finance Bank", "City Union Bank", "BCMS / RADC"],
+  companies: ["Winjit Technologies", "Suryoday Small Finance Bank", "City Union Bank"],
   stack: [".NET Core", "C#", "SQL Server", "REST APIs", "Docker", "AWS", "Redis"],
-  metrics: [
-    { value: "4.5+", label: "years shipping production software" },
-    { value: "95%", label: "database load reduction with Redis caching" },
-    { value: "40-45%", label: "SQL performance improvement on core workflows" }
-  ],
   navigation: [
     { label: "Work", href: "#work" },
     { label: "Projects", href: "#projects" },
@@ -62,7 +57,7 @@ export const projects = [
     description:
       "Developed transaction and authentication APIs for a small finance bank deployment, then introduced Redis caching to reduce database pressure during peak usage.",
     impact:
-      "Implemented Redis caching strategy to reduce database query load by ~95%, significantly improving API response latency at peak transaction volumes.",
+      "Implemented Redis caching strategy to reduce database query load by 95%, significantly improving API response latency at peak transaction volumes.",
     tech: [".NET Core", "SQL Server", "Redis", "REST APIs", "Authentication"],
     links: {
       live: "#contact",
@@ -84,13 +79,13 @@ export const projects = [
     }
   },
   {
-    title: "BCMS - Business Compliance Management System",
-    eyebrow: "Loan Workflows",
+    title: "Business Compliance Management System - BFSI Loan Platform",
+    eyebrow: "BFSI Loan Platform",
     duration: "1141 days",
     description:
-      "Built workflow modules for loan application, account opening, loan collection, product renewal, and maker-checker approval journeys.",
+      "Worked on a web-based application to streamline loan application and account opening processes for new and existing customers across NTB, top-up, regular renewal, proactive renewal, and parallel renewal JLG loan products.",
     impact:
-      "Helped streamline BFSI operations across multiple lending products with scalable APIs, AWS S3 storage, SOAP/REST integrations, and Docker deployment.",
+      "Contributed to maker/checker accessibility features, allowing retail agents to process loan disbursement securely.",
     tech: [".NET Core", "Entity Framework", "SQL Server", "AWS S3", "Docker"],
     links: {
       live: "#contact",
@@ -143,7 +138,7 @@ export const skillGroups = [
 export const education = [
   {
     degree: "MCA, Computers",
-    school: "Gokhale Education Society's HPT Arts and RYK Science College, Nashik",
+    school: "Pune University",
     year: "2023"
   },
   {
@@ -153,4 +148,4 @@ export const education = [
   }
 ];
 
-export const certifications = ["AWS Fundamentals: Going Cloud Native", "Problem Solving (Basic)"];
+export const certifications = ["AWS Fundamentals: Going Cloud Native"];
