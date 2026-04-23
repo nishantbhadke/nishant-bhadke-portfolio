@@ -79,8 +79,8 @@ export const projects = [
     }
   },
   {
-    title: "Business Compliance Management System - BFSI Loan Platform",
-    eyebrow: "BFSI Loan Platform",
+    title: "BCMS",
+    eyebrow: "Loan Workflows",
     duration: "1141 days",
     description:
       "Worked on a web-based application to streamline loan application and account opening processes for new and existing customers across NTB, top-up, regular renewal, proactive renewal, and parallel renewal JLG loan products.",
